@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#fcfcfc] text-[#2c2c2c];
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+.masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* Adjust based on gap */
+  width: auto;
+}
+.masonry-grid_column {
+  padding-left: 1rem; /* Adjust based on gap */
+  background-clip: padding-box;
+}
