@@ -2,8 +2,8 @@
   "name": "sk-gallery",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend",
-    "render-build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
+    "render-build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
     "start": "node backend/server.js",
     "dev": "npm run dev --prefix backend"
   },
