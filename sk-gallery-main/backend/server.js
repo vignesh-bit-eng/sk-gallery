@@ -87,8 +87,10 @@ app.use('/api/users', userRoutes);
 // Determine frontend build directory path accurately
 const possibleFrontendPaths = [
   path.join(__dirname, '../frontend/dist'),
+  path.resolve(process.cwd(), 'frontend/dist'),
   path.join(__dirname, '../dist'),
   path.join(__dirname, 'dist'),
+  path.resolve(process.cwd(), 'dist'),
 ];
 
 const frontendPath = possibleFrontendPaths.find(p => fs.existsSync(p)) || possibleFrontendPaths[0];
