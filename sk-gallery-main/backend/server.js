@@ -99,7 +99,7 @@ const frontendPath = possibleFrontendPaths.find(p => fs.existsSync(p)) || possib
 app.use(express.static(frontendPath));
 
 // Wildcard catch-all route for SPA routing (must be placed AFTER express.static and all API routes)
-app.get('*', (req, res) => {
+app.get('(.*)', (req, res) => {
   // If request is for a missing static asset or file extension, return 404 instead of index.html
   if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|json|woff|woff2|ttf|eot|map)$/)) {
     return res.status(404).send('Asset not found');
